@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 蓝尔科技. All rights reserved.
 //
 
-#import "LE_AppDelegate.h"
+#import "LEAppDelegate.h"
 
-@implementation LE_AppDelegate
+@implementation LEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

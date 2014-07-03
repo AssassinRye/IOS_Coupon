@@ -1,5 +1,5 @@
 //
-//  LE_ViewController.h
+//  LE_AppDelegate.h
 //  Coupon
 //
 //  Created by 蓝尔科技 on 14-7-2.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LE_ViewController : UIViewController
+@interface LEAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end
