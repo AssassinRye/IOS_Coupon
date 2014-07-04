@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol LEMainImageViewButtonDelegate
+@protocol LEMainFunctionImageViewButtonDelegate
 
 // 点击button切换视图
 - (void) gestureRecognizerPushViewController;
@@ -18,10 +18,11 @@
 
 @interface LEMainImageViewButton : UIImageView
 
-@property (strong, nonatomic) id<LEMainImageViewButtonDelegate> delegate;
+@property (strong, nonatomic) id<LEMainFunctionImageViewButtonDelegate> delegate;
 @property (copy, nonatomic) NSString *titleName; // 标题
 
+// 加载imageButton数据
 - (id)initWithPoint:(CGPoint)point andData:(NSDictionary *)dic;
-;
+
 
 @end

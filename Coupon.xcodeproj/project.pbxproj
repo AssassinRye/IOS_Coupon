@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		20F0C0959FE845CB92DF7F72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2762B50217BF4CDE8D810FCA /* libPods.a */; };
+		2C46E3CC196639A300C89947 /* LEMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CB196639A300C89947 /* LEMainTableViewController.m */; };
+		2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */; };
+		2C46E3D11966430000C89947 /* ad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C46E3D01966430000C89947 /* ad.xib */; };
+		2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3D3196655E000C89947 /* LEMainADImageView.m */; };
 		2C8E58861963EFE1005B3F52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58851963EFE1005B3F52 /* Foundation.framework */; };
 		2C8E58881963EFE1005B3F52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */; };
 		2C8E588A1963EFE1005B3F52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58891963EFE1005B3F52 /* UIKit.framework */; };
@@ -21,10 +25,6 @@
 		2C8E58A71963EFE1005B3F52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58891963EFE1005B3F52 /* UIKit.framework */; };
 		2C8E58AF1963EFE1005B3F52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E58AD1963EFE1005B3F52 /* InfoPlist.strings */; };
 		2C8E58B11963EFE1005B3F52 /* CouponTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E58B01963EFE1005B3F52 /* CouponTests.m */; };
-		2CC6698C1964F28D0005E4A2 /* LEMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6698B1964F28D0005E4A2 /* LEMainController.m */; };
-		2CC669961964F38B0005E4A2 /* LEMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC669941964F38B0005E4A2 /* LEMainTableViewCell.m */; };
-		2CC669971964F38B0005E4A2 /* LEMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC669951964F38B0005E4A2 /* LEMainTableViewCell.xib */; };
-		2CC669A01964F5D70005E4A2 /* LEMainTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6699F1964F5D70005E4A2 /* LEMainTableViewCellButton.m */; };
 		2CC669A419654A020005E4A2 /* LEMainImageViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC669A319654A020005E4A2 /* LEMainImageViewButton.m */; };
 		2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC669A6196552C90005E4A2 /* LEMainFunctionTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +41,13 @@
 
 /* Begin PBXFileReference section */
 		2762B50217BF4CDE8D810FCA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C46E3CA196639A300C89947 /* LEMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainTableViewController.h; sourceTree = "<group>"; };
+		2C46E3CB196639A300C89947 /* LEMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainTableViewController.m; sourceTree = "<group>"; };
+		2C46E3CD196642E500C89947 /* LEMainADTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADTableViewCell.h; sourceTree = "<group>"; };
+		2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainADTableViewCell.m; sourceTree = "<group>"; };
+		2C46E3D01966430000C89947 /* ad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ad.xib; sourceTree = "<group>"; };
+		2C46E3D2196655E000C89947 /* LEMainADImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADImageView.h; sourceTree = "<group>"; };
+		2C46E3D3196655E000C89947 /* LEMainADImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainADImageView.m; sourceTree = "<group>"; };
 		2C8E58821963EFE1005B3F52 /* 优惠劵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优惠劵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8E58851963EFE1005B3F52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,13 +65,6 @@
 		2C8E58AC1963EFE1005B3F52 /* CouponTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouponTests-Info.plist"; sourceTree = "<group>"; };
 		2C8E58AE1963EFE1005B3F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C8E58B01963EFE1005B3F52 /* CouponTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTests.m; sourceTree = "<group>"; };
-		2CC6698A1964F28D0005E4A2 /* LEMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainController.h; sourceTree = "<group>"; };
-		2CC6698B1964F28D0005E4A2 /* LEMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainController.m; sourceTree = "<group>"; };
-		2CC669931964F38B0005E4A2 /* LEMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainTableViewCell.h; sourceTree = "<group>"; };
-		2CC669941964F38B0005E4A2 /* LEMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainTableViewCell.m; sourceTree = "<group>"; };
-		2CC669951964F38B0005E4A2 /* LEMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LEMainTableViewCell.xib; sourceTree = "<group>"; };
-		2CC6699E1964F5D70005E4A2 /* LEMainTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainTableViewCellButton.h; sourceTree = "<group>"; };
-		2CC6699F1964F5D70005E4A2 /* LEMainTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainTableViewCellButton.m; sourceTree = "<group>"; };
 		2CC669A11964FB000005E4A2 /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
 		2CC669A219654A020005E4A2 /* LEMainImageViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainImageViewButton.h; sourceTree = "<group>"; };
 		2CC669A319654A020005E4A2 /* LEMainImageViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainImageViewButton.m; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 		2CC669891964F28D0005E4A2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2CC6698A1964F28D0005E4A2 /* LEMainController.h */,
-				2CC6698B1964F28D0005E4A2 /* LEMainController.m */,
+				2C46E3CA196639A300C89947 /* LEMainTableViewController.h */,
+				2C46E3CB196639A300C89947 /* LEMainTableViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -210,15 +210,15 @@
 		2CC669921964F38B0005E4A2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2CC669931964F38B0005E4A2 /* LEMainTableViewCell.h */,
-				2CC669941964F38B0005E4A2 /* LEMainTableViewCell.m */,
-				2CC669951964F38B0005E4A2 /* LEMainTableViewCell.xib */,
-				2CC6699E1964F5D70005E4A2 /* LEMainTableViewCellButton.h */,
-				2CC6699F1964F5D70005E4A2 /* LEMainTableViewCellButton.m */,
 				2CC669A219654A020005E4A2 /* LEMainImageViewButton.h */,
 				2CC669A319654A020005E4A2 /* LEMainImageViewButton.m */,
 				2CC669A5196552C90005E4A2 /* LEMainFunctionTableViewCell.h */,
 				2CC669A6196552C90005E4A2 /* LEMainFunctionTableViewCell.m */,
+				2C46E3CD196642E500C89947 /* LEMainADTableViewCell.h */,
+				2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */,
+				2C46E3D01966430000C89947 /* ad.xib */,
+				2C46E3D2196655E000C89947 /* LEMainADImageView.h */,
+				2C46E3D3196655E000C89947 /* LEMainADImageView.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -302,8 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46E3D11966430000C89947 /* ad.xib in Resources */,
 				2C8E589E1963EFE1005B3F52 /* Images.xcassets in Resources */,
-				2CC669971964F38B0005E4A2 /* LEMainTableViewCell.xib in Resources */,
 				2C8E58901963EFE1005B3F52 /* InfoPlist.strings in Resources */,
 				2C8E58991963EFE1005B3F52 /* Main.storyboard in Resources */,
 			);
@@ -357,12 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CC669A01964F5D70005E4A2 /* LEMainTableViewCellButton.m in Sources */,
 				2C8E58921963EFE1005B3F52 /* main.m in Sources */,
 				2CC669A419654A020005E4A2 /* LEMainImageViewButton.m in Sources */,
-				2CC669961964F38B0005E4A2 /* LEMainTableViewCell.m in Sources */,
+				2C46E3CC196639A300C89947 /* LEMainTableViewController.m in Sources */,
 				2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */,
-				2CC6698C1964F28D0005E4A2 /* LEMainController.m in Sources */,
+				2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */,
+				2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */,
 				2C8E58961963EFE1005B3F52 /* LEAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

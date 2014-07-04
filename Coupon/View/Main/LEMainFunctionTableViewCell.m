@@ -16,7 +16,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
+        [self loadImageViewButton];
     }
     return self;
 }
@@ -29,11 +29,11 @@
         NSDictionary *functionDic = [[NSDictionary alloc] initWithObjectsAndKeys:functionArray[i],@"titleName",[NSString stringWithFormat:@"ios_main_function_%@.png",functionArray[i]],@"imageName", nil];
         // 通过i判断button的行
         if (i < 4) {
-            LEMainImageViewButton *imageButton = [[LEMainImageViewButton alloc] initWithPoint:CGPointMake(11 + i * 76, 8) andData:functionDic];
+            LEMainImageViewButton *imageButton = [[LEMainImageViewButton alloc] initWithPoint:CGPointMake(11 + i * 76, 10) andData:functionDic];
             [self.contentView addSubview:imageButton];
 
         }else{
-            LEMainImageViewButton *imageButton = [[LEMainImageViewButton alloc] initWithPoint:CGPointMake(11 + (i - 4) * 76, 8) andData:functionDic];
+            LEMainImageViewButton *imageButton = [[LEMainImageViewButton alloc] initWithPoint:CGPointMake(11 + (i - 4) * 76, 80) andData:functionDic];
             [self.contentView addSubview:imageButton];
         }
         
