@@ -24,7 +24,8 @@
 - (void)drawTextInRect:(CGRect)rect{
     [super drawTextInRect:rect];
     
-    CGSize textSize = [[self text] sizeWithAttributes:[self font]];
+
+    CGSize textSize = [[self text] sizeWithAttributes:@{ NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0] }];
     CGFloat strikeWidth = textSize.width;
     CGRect lineRect;
     
