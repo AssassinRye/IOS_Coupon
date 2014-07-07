@@ -9,6 +9,7 @@
 #import "LEMainTableViewController.h"
 #import "LEMainFunctionTableViewCell.h"
 #import "LEMainADTableViewCell.h"
+#import "LEMainDataTableViewCell.h"
 
 @interface LEMainTableViewController ()
 
@@ -35,7 +36,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.tableView.dataSource =self;
+//    self.tableView.dataSource =self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +67,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
 {
-    if (section == 1) {
+    if (section == 0) {
+        return 0.f;
+    }else if(section == 1){
         return 30.f;
     }
     return 0.f;
@@ -78,24 +81,26 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    
     // 设置一个组头view
-    if (section == 1) {
+    if (section != 0) {
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 0, 200, 25)];
         [titleLabel setText:@"热们优惠 HOT SALE"];
         [titleLabel setTextColor:[UIColor blackColor]];
-        [titleLabel setFont:[UIFont fontWithName:@"华文细黑" size:25.f]];
+        [titleLabel setFont:[UIFont fontWithName:@"华文细黑" size:12.5]];
         [titleLabel sizeToFit];
-        [headerView addSubview:titleLabel];
+        [tableView.tableHeaderView addSubview:titleLabel];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(51, 26, 4, 2)];
         [imageView setBackgroundColor:[UIColor blackColor]];
-        [headerView addSubview:imageView];
+        [tableView.tableHeaderView addSubview:imageView];
         UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 28, 298, 2)];
         [lineLabel setBackgroundColor:[UIColor redColor]];
-        [headerView addSubview:lineLabel];
-        return headerView;
+        [tableView.tableHeaderView addSubview:lineLabel];
+        return tableView.tableHeaderView;
+        
     }
-    return nil;
+    return tableView.tableHeaderView;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,13 +112,11 @@
             return 150.f;
         }
     }
-    return 60.f;
+    return 90.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    UITableViewCell *cell;
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             //
@@ -126,13 +129,13 @@
             return functionCell;
         }
     }else if (indexPath.section == 1){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"shanghuCell"];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"shanghuCell"];
-           
+        LEMainDataTableViewCell *dataCell = [tableView dequeueReusableCellWithIdentifier:@"shanghuCell"];
+        if (!dataCell) {
+            dataCell = [[LEMainDataTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"dataCell"];
         }
+        return dataCell;
     }
-    return cell;
+    return nil;
     
 }
 

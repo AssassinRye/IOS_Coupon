@@ -12,6 +12,10 @@
 		2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */; };
 		2C46E3D11966430000C89947 /* ad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C46E3D01966430000C89947 /* ad.xib */; };
 		2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3D3196655E000C89947 /* LEMainADImageView.m */; };
+		2C8B3588196A33E70001A11E /* LEMainDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3587196A33E70001A11E /* LEMainDataTableViewCell.m */; };
+		2C8B358B196A45770001A11E /* LEDelectLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B358A196A45770001A11E /* LEDelectLineLabel.m */; };
+		2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B358D196A4F060001A11E /* CommonlyUsedMethod.m */; };
+		2C8B35D1196A75C30001A11E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8B35D0196A75C30001A11E /* CoreData.framework */; };
 		2C8E58861963EFE1005B3F52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58851963EFE1005B3F52 /* Foundation.framework */; };
 		2C8E58881963EFE1005B3F52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */; };
 		2C8E588A1963EFE1005B3F52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58891963EFE1005B3F52 /* UIKit.framework */; };
@@ -48,6 +52,13 @@
 		2C46E3D01966430000C89947 /* ad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ad.xib; sourceTree = "<group>"; };
 		2C46E3D2196655E000C89947 /* LEMainADImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADImageView.h; sourceTree = "<group>"; };
 		2C46E3D3196655E000C89947 /* LEMainADImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainADImageView.m; sourceTree = "<group>"; };
+		2C8B3586196A33E70001A11E /* LEMainDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainDataTableViewCell.h; sourceTree = "<group>"; };
+		2C8B3587196A33E70001A11E /* LEMainDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainDataTableViewCell.m; sourceTree = "<group>"; };
+		2C8B3589196A45770001A11E /* LEDelectLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDelectLineLabel.h; sourceTree = "<group>"; };
+		2C8B358A196A45770001A11E /* LEDelectLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDelectLineLabel.m; sourceTree = "<group>"; };
+		2C8B358C196A4F060001A11E /* CommonlyUsedMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonlyUsedMethod.h; sourceTree = "<group>"; };
+		2C8B358D196A4F060001A11E /* CommonlyUsedMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonlyUsedMethod.m; sourceTree = "<group>"; };
+		2C8B35D0196A75C30001A11E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2C8E58821963EFE1005B3F52 /* 优惠劵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优惠劵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8E58851963EFE1005B3F52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8B35D1196A75C30001A11E /* CoreData.framework in Frameworks */,
 				2C8E58881963EFE1005B3F52 /* CoreGraphics.framework in Frameworks */,
 				2C8E588A1963EFE1005B3F52 /* UIKit.framework in Frameworks */,
 				2C8E58861963EFE1005B3F52 /* Foundation.framework in Frameworks */,
@@ -121,6 +133,7 @@
 		2C8E58841963EFE1005B3F52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C8B35D0196A75C30001A11E /* CoreData.framework */,
 				2C8E58851963EFE1005B3F52 /* Foundation.framework */,
 				2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */,
 				2C8E58891963EFE1005B3F52 /* UIKit.framework */,
@@ -153,6 +166,8 @@
 				2C8E58911963EFE1005B3F52 /* main.m */,
 				2C8E58931963EFE1005B3F52 /* Coupon-Prefix.pch */,
 				2CC669A11964FB000005E4A2 /* GlobalMacro.h */,
+				2C8B358C196A4F060001A11E /* CommonlyUsedMethod.h */,
+				2C8B358D196A4F060001A11E /* CommonlyUsedMethod.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +234,10 @@
 				2C46E3D01966430000C89947 /* ad.xib */,
 				2C46E3D2196655E000C89947 /* LEMainADImageView.h */,
 				2C46E3D3196655E000C89947 /* LEMainADImageView.m */,
+				2C8B3586196A33E70001A11E /* LEMainDataTableViewCell.h */,
+				2C8B3587196A33E70001A11E /* LEMainDataTableViewCell.m */,
+				2C8B3589196A45770001A11E /* LEDelectLineLabel.h */,
+				2C8B358A196A45770001A11E /* LEDelectLineLabel.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -360,10 +379,13 @@
 				2C8E58921963EFE1005B3F52 /* main.m in Sources */,
 				2CC669A419654A020005E4A2 /* LEMainImageViewButton.m in Sources */,
 				2C46E3CC196639A300C89947 /* LEMainTableViewController.m in Sources */,
+				2C8B358B196A45770001A11E /* LEDelectLineLabel.m in Sources */,
 				2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */,
+				2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */,
 				2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */,
 				2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */,
 				2C8E58961963EFE1005B3F52 /* LEAppDelegate.m in Sources */,
+				2C8B3588196A33E70001A11E /* LEMainDataTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
