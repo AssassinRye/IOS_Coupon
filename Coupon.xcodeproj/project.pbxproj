@@ -12,6 +12,9 @@
 		2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */; };
 		2C46E3D11966430000C89947 /* ad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C46E3D01966430000C89947 /* ad.xib */; };
 		2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3D3196655E000C89947 /* LEMainADImageView.m */; };
+		2C7DD384196B8F03006C2D5C /* LEMyselfTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD383196B8F03006C2D5C /* LEMyselfTableViewController.m */; };
+		2C7DD38A196BD8D9006C2D5C /* LEShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD389196BD8D9006C2D5C /* LEShopTableViewController.m */; };
+		2C7DD38F196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD38E196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m */; };
 		2C8B3588196A33E70001A11E /* LEMainDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3587196A33E70001A11E /* LEMainDataTableViewCell.m */; };
 		2C8B358B196A45770001A11E /* LEDelectLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B358A196A45770001A11E /* LEDelectLineLabel.m */; };
 		2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B358D196A4F060001A11E /* CommonlyUsedMethod.m */; };
@@ -52,6 +55,12 @@
 		2C46E3D01966430000C89947 /* ad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ad.xib; sourceTree = "<group>"; };
 		2C46E3D2196655E000C89947 /* LEMainADImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADImageView.h; sourceTree = "<group>"; };
 		2C46E3D3196655E000C89947 /* LEMainADImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainADImageView.m; sourceTree = "<group>"; };
+		2C7DD382196B8F03006C2D5C /* LEMyselfTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMyselfTableViewController.h; sourceTree = "<group>"; };
+		2C7DD383196B8F03006C2D5C /* LEMyselfTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMyselfTableViewController.m; sourceTree = "<group>"; };
+		2C7DD388196BD8D9006C2D5C /* LEShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEShopTableViewController.h; sourceTree = "<group>"; };
+		2C7DD389196BD8D9006C2D5C /* LEShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEShopTableViewController.m; sourceTree = "<group>"; };
+		2C7DD38D196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMyselfLoginTableViewCell.h; sourceTree = "<group>"; };
+		2C7DD38E196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMyselfLoginTableViewCell.m; sourceTree = "<group>"; };
 		2C8B3586196A33E70001A11E /* LEMainDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainDataTableViewCell.h; sourceTree = "<group>"; };
 		2C8B3587196A33E70001A11E /* LEMainDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainDataTableViewCell.m; sourceTree = "<group>"; };
 		2C8B3589196A45770001A11E /* LEDelectLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDelectLineLabel.h; sourceTree = "<group>"; };
@@ -110,6 +119,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C7DD37D196B8E4E006C2D5C /* Myself */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD382196B8F03006C2D5C /* LEMyselfTableViewController.h */,
+				2C7DD383196B8F03006C2D5C /* LEMyselfTableViewController.m */,
+			);
+			path = Myself;
+			sourceTree = "<group>";
+		};
+		2C7DD37E196B8E4E006C2D5C /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD388196BD8D9006C2D5C /* LEShopTableViewController.h */,
+				2C7DD389196BD8D9006C2D5C /* LEShopTableViewController.m */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		2C7DD38B196BEA14006C2D5C /* Myself */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD38D196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.h */,
+				2C7DD38E196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m */,
+			);
+			path = Myself;
+			sourceTree = "<group>";
+		};
+		2C7DD38C196BEA14006C2D5C /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		2C8E58791963EFE0005B3F52 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +236,8 @@
 		2CC669831964F1CA0005E4A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD37D196B8E4E006C2D5C /* Myself */,
+				2C7DD37E196B8E4E006C2D5C /* Shop */,
 				2CC669891964F28D0005E4A2 /* Main */,
 			);
 			path = Controller;
@@ -208,6 +253,8 @@
 		2CC669851964F1CA0005E4A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD38B196BEA14006C2D5C /* Myself */,
+				2C7DD38C196BEA14006C2D5C /* Shop */,
 				2CC669921964F38B0005E4A2 /* Main */,
 			);
 			path = View;
@@ -383,7 +430,10 @@
 				2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */,
 				2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */,
 				2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */,
+				2C7DD384196B8F03006C2D5C /* LEMyselfTableViewController.m in Sources */,
+				2C7DD38A196BD8D9006C2D5C /* LEShopTableViewController.m in Sources */,
 				2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */,
+				2C7DD38F196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m in Sources */,
 				2C8E58961963EFE1005B3F52 /* LEAppDelegate.m in Sources */,
 				2C8B3588196A33E70001A11E /* LEMainDataTableViewCell.m in Sources */,
 			);

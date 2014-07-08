@@ -29,15 +29,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    self.tableView.dataSource =self;
+    [self.tabBarController.tabBar setSelectedImageTintColor:[CommonlyUsedMethod colorWithHexString:@"FF6738"]];
+    // 根据版本进行navigationController的颜色调整
+  if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+//    Load resources for iOS 6.1 or earlier
+    self.navigationController.navigationBar.tintColor = [CommonlyUsedMethod colorWithHexString:@"FF6738"];
+    } else {
+        // Load resources for iOS 7 or later
+        self.navigationController.navigationBar.barTintColor = [CommonlyUsedMethod colorWithHexString:@"FF6738"];
+    }
+    [self addRefreshViewControl];
 }
+
+
+// 添加UIRefreshControl下拉刷新控件到UITableViewController的view中
+-(void)addRefreshViewControl
+{
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(RefreshViewControlEventValueChanged) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void)RefreshViewControlEventValueChanged
+{
+    if (self.refreshControl.refreshing) {
+        NSLog(@"refreshing");
+//        self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"刷新中"];
+        [self performSelector:@selector(handleData) withObject:nil afterDelay:2];
+    }
+}
+
+- (void) handleData
+{
+    NSLog(@"refreshed");
+    [self.refreshControl endRefreshing];
+//    self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"下拉刷新"];
+    [self.tableView reloadData];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -65,19 +94,16 @@
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
         return 0.f;
     }else if(section == 1){
-        return 30.f;
+        return 25.f;
     }
     return 0.f;
 }
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"dasdsda";
-}
+
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -85,19 +111,19 @@
     // 设置一个组头view
     if (section != 0) {
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 0, 200, 25)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 0, 200, 20)];
+        [titleLabel setTextColor:[CommonlyUsedMethod colorWithHexString:@"#2f2f2f"]];
+        [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:15.f]];
         [titleLabel setText:@"热们优惠 HOT SALE"];
-        [titleLabel setTextColor:[UIColor blackColor]];
-        [titleLabel setFont:[UIFont fontWithName:@"华文细黑" size:12.5]];
         [titleLabel sizeToFit];
-        [tableView.tableHeaderView addSubview:titleLabel];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(51, 26, 4, 2)];
-        [imageView setBackgroundColor:[UIColor blackColor]];
-        [tableView.tableHeaderView addSubview:imageView];
-        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 28, 298, 2)];
+        [headerView addSubview:titleLabel];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(70, 21, 4, 2)];
+        [imageView setImage:[UIImage imageNamed:@"ios_main_list_arrows"]];
+        [headerView addSubview:imageView];
+        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 23, 298, 2)];
         [lineLabel setBackgroundColor:[UIColor redColor]];
-        [tableView.tableHeaderView addSubview:lineLabel];
-        return tableView.tableHeaderView;
+        [headerView addSubview:lineLabel];
+        return headerView;
         
     }
     return tableView.tableHeaderView;
@@ -119,16 +145,18 @@
 {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            //
+            // 加载广告cell
             LEMainADTableViewCell *adCell = [[LEMainADTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"adCell"];
             adCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return adCell;
         }else if(indexPath.row == 1){
+            // 加载功能cell
             LEMainFunctionTableViewCell *functionCell = [[LEMainFunctionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"functionCell"];
             functionCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return functionCell;
         }
     }else if (indexPath.section == 1){
+        // 加载数据cell
         LEMainDataTableViewCell *dataCell = [tableView dequeueReusableCellWithIdentifier:@"shanghuCell"];
         if (!dataCell) {
             dataCell = [[LEMainDataTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"dataCell"];

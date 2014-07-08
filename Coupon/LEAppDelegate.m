@@ -7,6 +7,10 @@
 //
 
 #import "LEAppDelegate.h"
+#import "LEMainTableViewController.h"
+#import "LEMyselfTableViewController.h"
+#import "LEShopTableViewController.h"
+
 
 
 @implementation LEAppDelegate
@@ -19,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+        
     return YES;
 }
 							
