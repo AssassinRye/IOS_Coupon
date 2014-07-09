@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "ios_tabbar_myself.png"
+      "filename" : "ios_myself_loginCell_border.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "ios_tabbar_myself@2x.png"
+      "filename" : "ios_myself_loginCell_border@2x.png"
     }
   ],
   "info" : {

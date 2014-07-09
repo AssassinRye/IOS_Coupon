@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20F0C0959FE845CB92DF7F72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2762B50217BF4CDE8D810FCA /* libPods.a */; };
+		2C32EBEB196CD78500309A52 /* LEMyselfLoginInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C32EBEA196CD78500309A52 /* LEMyselfLoginInfoView.m */; };
 		2C46E3CC196639A300C89947 /* LEMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CB196639A300C89947 /* LEMainTableViewController.m */; };
 		2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46E3CE196642E500C89947 /* LEMainADTableViewCell.m */; };
 		2C46E3D11966430000C89947 /* ad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C46E3D01966430000C89947 /* ad.xib */; };
@@ -48,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		2762B50217BF4CDE8D810FCA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C32EBE9196CD78500309A52 /* LEMyselfLoginInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMyselfLoginInfoView.h; sourceTree = "<group>"; };
+		2C32EBEA196CD78500309A52 /* LEMyselfLoginInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMyselfLoginInfoView.m; sourceTree = "<group>"; };
 		2C46E3CA196639A300C89947 /* LEMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainTableViewController.h; sourceTree = "<group>"; };
 		2C46E3CB196639A300C89947 /* LEMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainTableViewController.m; sourceTree = "<group>"; };
 		2C46E3CD196642E500C89947 /* LEMainADTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADTableViewCell.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				2C7DD38D196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.h */,
 				2C7DD38E196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m */,
+				2C32EBE9196CD78500309A52 /* LEMyselfLoginInfoView.h */,
+				2C32EBEA196CD78500309A52 /* LEMyselfLoginInfoView.m */,
 			);
 			path = Myself;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */,
 				2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */,
 				2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */,
+				2C32EBEB196CD78500309A52 /* LEMyselfLoginInfoView.m in Sources */,
 				2C7DD384196B8F03006C2D5C /* LEMyselfTableViewController.m in Sources */,
 				2C7DD38A196BD8D9006C2D5C /* LEShopTableViewController.m in Sources */,
 				2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */,

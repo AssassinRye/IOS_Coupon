@@ -7,6 +7,7 @@
 //
 
 #import "LEMyselfTableViewController.h"
+#import "LEMyselfLoginTableViewCell.h"
 
 @interface LEMyselfTableViewController ()
 
@@ -55,26 +56,54 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 5;
 }
 
-/*
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 130.f;
+    }else if (indexPath.row == 1){
+        return 10.f;
+    }else{
+        return 40.f;
+    }
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if (indexPath.row == 0) {
+        LEMyselfLoginTableViewCell *loginCell  = [[LEMyselfLoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"loginCell"];
+        loginCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return loginCell;
+    }else if(indexPath.row == 1){
+        UITableViewCell *emptyCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"emptyCell"];
+        emptyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return emptyCell;
+    }else{
+        UITableViewCell *normalCell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"];
+        if (!normalCell) {
+            normalCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"normalCell"];
+        }
+        return normalCell;
+
+    }
+   
     
     // Configure the cell...
     
-    return cell;
+    return nil;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
