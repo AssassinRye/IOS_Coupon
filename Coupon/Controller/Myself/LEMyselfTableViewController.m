@@ -10,6 +10,9 @@
 #import "LEMyselfLoginTableViewCell.h"
 
 @interface LEMyselfTableViewController ()
+{
+    NSArray *_cellDataArray; // cell数据数组
+}
 
 @end
 
@@ -27,21 +30,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
+    _cellDataArray = @[@{@"imageName":@"ios_myself_chagePassword",@"titleName":@"修改密码"},@{@"imageName":@"ios_myself_chageVip",@"titleName":@"升级会员"},@{@"imageName":@"ios_myself_consumption",@"titleName":@"消费记录"}];
+    
+   
+    
     self.navigationController.navigationItem.title = @"个人中心";
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         //    Load resources for iOS 6.1 or earlier
-        self.navigationController.navigationBar.tintColor = [CommonlyUsedMethod colorWithHexString:@"FF6738"];
+        self.navigationController.navigationBar.tintColor = [CommonlyUsedMethod colorWithHexString:@"#FF6738"];
     } else {
         // Load resources for iOS 7 or later
-        self.navigationController.navigationBar.barTintColor = [CommonlyUsedMethod colorWithHexString:@"FF6738"];
+        self.navigationController.navigationBar.barTintColor = [CommonlyUsedMethod colorWithHexString:@"#FF6738"];
     }
-
+    // 去掉多余的分割线
+    [self setExtraCellLineHidden:self.tableView];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+// 去掉多余分割线
+-(void)setExtraCellLineHidden: (UITableView *)tableView
+{
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    [tableView setTableFooterView:view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,17 +71,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 5;
+    
+    if (section == 0) {
+        return 5;
+    }else{
+        return 0;
+    }
+    
 }
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,18 +105,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
+        // 登录cell
         LEMyselfLoginTableViewCell *loginCell  = [[LEMyselfLoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"loginCell"];
-        loginCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return loginCell;
     }else if(indexPath.row == 1){
+        // 空白行cell
         UITableViewCell *emptyCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"emptyCell"];
         emptyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return emptyCell;
     }else{
+        // 功能cell
         UITableViewCell *normalCell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"];
         if (!normalCell) {
             normalCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"normalCell"];
         }
+        // 箭头类型
+        [normalCell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        // 添加image
+        normalCell.imageView.image = [UIImage imageNamed:_cellDataArray[indexPath.row - 2][@"imageName"]];
+        normalCell.textLabel.textColor = [CommonlyUsedMethod colorWithHexString:@"#666666"];
+        normalCell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:14.f];
+        normalCell.textLabel.text = _cellDataArray[indexPath.row - 2][@"titleName"];
         return normalCell;
 
     }

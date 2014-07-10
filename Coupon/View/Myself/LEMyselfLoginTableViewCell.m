@@ -34,6 +34,7 @@
 {
     // 登录cell背景
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ios_myself_loginCell_bg"]];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     [backgroundImage setFrame:CGRectMake(0, 0, 320, 60) ];
     // 登录提示标签
     _loginHintLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 25, 100, 20)];
@@ -63,6 +64,7 @@
 
     
     LEMyselfLoginInfoView *collectInfoView = [[LEMyselfLoginInfoView alloc] initPoint:CGPointMake(320 - 320 / 3, backgroundImage.frame.size.height) andDataDic:@{@"titleText": @"收藏",@"countText":@"0",@"titleImage":@"ios_myself_loginCell_collect"}];
+    
 
     [self.contentView addSubview:backgroundImage];
     [self.contentView addSubview:_loginHintLabel];

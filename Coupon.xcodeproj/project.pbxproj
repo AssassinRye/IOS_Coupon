@@ -33,6 +33,9 @@
 		2C8E58A71963EFE1005B3F52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E58891963EFE1005B3F52 /* UIKit.framework */; };
 		2C8E58AF1963EFE1005B3F52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E58AD1963EFE1005B3F52 /* InfoPlist.strings */; };
 		2C8E58B11963EFE1005B3F52 /* CouponTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E58B01963EFE1005B3F52 /* CouponTests.m */; };
+		2CC44FAD196E7440001FF74F /* XXChooseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC44FAC196E7440001FF74F /* XXChooseList.m */; };
+		2CC44FB0196E7D8A001FF74F /* XXChooseListButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC44FAF196E7D8A001FF74F /* XXChooseListButton.m */; };
+		2CC44FB3196E8432001FF74F /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC44FB2196E8432001FF74F /* UIImage+Tint.m */; };
 		2CC669A419654A020005E4A2 /* LEMainImageViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC669A319654A020005E4A2 /* LEMainImageViewButton.m */; };
 		2CC669A7196552C90005E4A2 /* LEMainFunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC669A6196552C90005E4A2 /* LEMainFunctionTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +91,12 @@
 		2C8E58AC1963EFE1005B3F52 /* CouponTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouponTests-Info.plist"; sourceTree = "<group>"; };
 		2C8E58AE1963EFE1005B3F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C8E58B01963EFE1005B3F52 /* CouponTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTests.m; sourceTree = "<group>"; };
+		2CC44FAB196E7440001FF74F /* XXChooseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXChooseList.h; sourceTree = "<group>"; };
+		2CC44FAC196E7440001FF74F /* XXChooseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXChooseList.m; sourceTree = "<group>"; };
+		2CC44FAE196E7D8A001FF74F /* XXChooseListButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXChooseListButton.h; sourceTree = "<group>"; };
+		2CC44FAF196E7D8A001FF74F /* XXChooseListButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXChooseListButton.m; sourceTree = "<group>"; };
+		2CC44FB1196E8432001FF74F /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		2CC44FB2196E8432001FF74F /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		2CC669A11964FB000005E4A2 /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
 		2CC669A219654A020005E4A2 /* LEMainImageViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainImageViewButton.h; sourceTree = "<group>"; };
 		2CC669A319654A020005E4A2 /* LEMainImageViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainImageViewButton.m; sourceTree = "<group>"; };
@@ -154,6 +163,7 @@
 		2C7DD38C196BEA14006C2D5C /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				2CC44FAA196E7417001FF74F /* ShopChooseList */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -236,6 +246,19 @@
 				2C8E58AD1963EFE1005B3F52 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CC44FAA196E7417001FF74F /* ShopChooseList */ = {
+			isa = PBXGroup;
+			children = (
+				2CC44FB1196E8432001FF74F /* UIImage+Tint.h */,
+				2CC44FB2196E8432001FF74F /* UIImage+Tint.m */,
+				2CC44FAB196E7440001FF74F /* XXChooseList.h */,
+				2CC44FAC196E7440001FF74F /* XXChooseList.m */,
+				2CC44FAE196E7D8A001FF74F /* XXChooseListButton.h */,
+				2CC44FAF196E7D8A001FF74F /* XXChooseListButton.m */,
+			);
+			path = ShopChooseList;
 			sourceTree = "<group>";
 		};
 		2CC669831964F1CA0005E4A2 /* Controller */ = {
@@ -436,9 +459,12 @@
 				2C8B358E196A4F060001A11E /* CommonlyUsedMethod.m in Sources */,
 				2C46E3D4196655E000C89947 /* LEMainADImageView.m in Sources */,
 				2C32EBEB196CD78500309A52 /* LEMyselfLoginInfoView.m in Sources */,
+				2CC44FB0196E7D8A001FF74F /* XXChooseListButton.m in Sources */,
 				2C7DD384196B8F03006C2D5C /* LEMyselfTableViewController.m in Sources */,
 				2C7DD38A196BD8D9006C2D5C /* LEShopTableViewController.m in Sources */,
 				2C46E3CF196642E500C89947 /* LEMainADTableViewCell.m in Sources */,
+				2CC44FAD196E7440001FF74F /* XXChooseList.m in Sources */,
+				2CC44FB3196E8432001FF74F /* UIImage+Tint.m in Sources */,
 				2C7DD38F196BEA4D006C2D5C /* LEMyselfLoginTableViewCell.m in Sources */,
 				2C8E58961963EFE1005B3F52 /* LEAppDelegate.m in Sources */,
 				2C8B3588196A33E70001A11E /* LEMainDataTableViewCell.m in Sources */,
