@@ -61,6 +61,7 @@
 		2C46E3D01966430000C89947 /* ad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ad.xib; sourceTree = "<group>"; };
 		2C46E3D2196655E000C89947 /* LEMainADImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMainADImageView.h; sourceTree = "<group>"; };
 		2C46E3D3196655E000C89947 /* LEMainADImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMainADImageView.m; sourceTree = "<group>"; };
+		2C6121CD196F76A80064073C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		2C7DD382196B8F03006C2D5C /* LEMyselfTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMyselfTableViewController.h; sourceTree = "<group>"; };
 		2C7DD383196B8F03006C2D5C /* LEMyselfTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMyselfTableViewController.m; sourceTree = "<group>"; };
 		2C7DD388196BD8D9006C2D5C /* LEShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEShopTableViewController.h; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 		2C8E58841963EFE1005B3F52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C6121CD196F76A80064073C /* CoreAudio.framework */,
 				2C8B35D0196A75C30001A11E /* CoreData.framework */,
 				2C8E58851963EFE1005B3F52 /* Foundation.framework */,
 				2C8E58871963EFE1005B3F52 /* CoreGraphics.framework */,

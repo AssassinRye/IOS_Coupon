@@ -18,4 +18,6 @@
 @property  (getter = isSelectClick ,nonatomic) BOOL selectClick;
 // 箭头图片
 @property (nonatomic) UIImageView *arrowsImageView;
+// 初始化
+- (id)initPoint:(CGPoint) point;
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XXChooseListButton.h"
 
 @interface XXChooseList : UIView<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic) XXChooseListButton *leftButton;
+@property (nonatomic) XXChooseListButton *rightButton;
 
 @end
